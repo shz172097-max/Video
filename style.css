@@ -25,20 +25,26 @@ h1 {
   font-size: 16px;
   background-color: #1e1e1e;
   color: #fff;
+  /* لضمان عمله بشكل جيد مع الاتجاه من اليمين لليسار */
+  box-sizing: border-box; 
 }
 
+/* تنسيق الشبكة */
 .grid {
   display: grid;
+  /* سيتم عرض الأعمدة تلقائياً بأبعاد تبدأ من 350 بكسل */
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
 }
 
+/* تنسيق بطاقة الفيديو */
 .video-card {
   background: #1e1e1e;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   transition: transform 0.2s;
+  overflow: hidden; /* لمنع أي محتوى زائد من الظهور خارج البطاقة */
 }
 
 .video-card:hover {
@@ -48,45 +54,20 @@ h1 {
 .video-card h3 {
   font-size: 18px;
   margin: 10px 0;
+  text-align: center;
 }
 
 .video-card img {
-  border-radius: 8px;
+  border-radius: 6px;
   width: 100%;
+  height: auto;
   margin-bottom: 10px;
-} 20px;
-  padding: 20px;
-}
-
-.video-card {
-  width: 90%;
-  max-width: 600px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  background-color: rgba(255, 255, 255, 0.08);
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.video-card:hover {
-  transform: scale(1.02);
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.video-card img {
-  width: 100%;
   display: block;
 }
 
-.video-card .title {
-  padding: 10px;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.video-card .tags {
-  padding: 0 10px 10px;
-  font-size: 0.9rem;
-  color: #ddd;
+/* تنسيق إطار الفيديو المضمن */
+.video-card iframe {
+  border-radius: 6px;
+  display: block;
+  /* للتأكد من أن إطار الفيديو يملأ المساحة المخصصة له */
 }
