@@ -1,0 +1,92 @@
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+.video-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.video-card img {
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+} 20px;
+  padding: 20px;
+}
+
+.video-card {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.video-card:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.video-card img {
+  width: 100%;
+  display: block;
+}
+
+.video-card .title {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.video-card .tags {
+  padding: 0 10px 10px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
