@@ -25,14 +25,13 @@ h1 {
   font-size: 16px;
   background-color: #1e1e1e;
   color: #fff;
-  /* لضمان عمله بشكل جيد مع الاتجاه من اليمين لليسار */
   box-sizing: border-box; 
 }
 
-/* تنسيق الشبكة */
+/* تنسيق الشبكة (Grid) */
 .grid {
   display: grid;
-  /* سيتم عرض الأعمدة تلقائياً بأبعاد تبدأ من 350 بكسل */
+  /* عرض 350 بكسل كحد أدنى لكل عمود */
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
 }
@@ -44,7 +43,9 @@ h1 {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   transition: transform 0.2s;
-  overflow: hidden; /* لمنع أي محتوى زائد من الظهور خارج البطاقة */
+  overflow: hidden; 
+  /* التأكد من أن جميع العناصر تستخدم صندوق محتويات واحد */
+  box-sizing: border-box; 
 }
 
 .video-card:hover {
@@ -57,6 +58,7 @@ h1 {
   text-align: center;
 }
 
+/* تنسيق الصورة المصغرة */
 .video-card img {
   border-radius: 6px;
   width: 100%;
@@ -69,5 +71,12 @@ h1 {
 .video-card iframe {
   border-radius: 6px;
   display: block;
-  /* للتأكد من أن إطار الفيديو يملأ المساحة المخصصة له */
+}
+
+/* استجابة الأجهزة (Mobile Responsiveness) */
+@media (max-width: 768px) {
+  .grid {
+    /* على الشاشات الصغيرة، استخدم عمود واحد لضمان التنسيق السليم */
+    grid-template-columns: 1fr; 
+  }
 }
